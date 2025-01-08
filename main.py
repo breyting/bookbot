@@ -33,11 +33,14 @@ def print_report(words, characters):
         max = float("-inf")
         max_character = ""
 
-        for charachter in characters:
-            if characters[charachter] > max:
-                max = characters[charachter]
-                max_character = charachter
+        for character in characters:
+            if characters[character] > max:
+                max = characters[character]
+                max_character = character
 
         print(f"The \'{max_character}\' charachter was found {max} times")
+        del characters[max_character]
+
+    print("--- End report ---")
 
 main()
